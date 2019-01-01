@@ -65,13 +65,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MoveControl.Designer.cs">
+      <DependentUpon>MoveControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransformControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransformControl.Designer.cs">
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FlowBlock.resx">
       <DependentUpon>FlowBlock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveControl.resx">
+      <DependentUpon>MoveControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +97,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TransformControl.resx">
+      <DependentUpon>TransformControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
