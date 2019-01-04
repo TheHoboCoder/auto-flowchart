@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.transformControl1 = new FlowChart.TransformControl();
             this.button1 = new System.Windows.Forms.Button();
+            this.transformControl1 = new FlowChart.TransformControl();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(368, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // transformControl1
             // 
@@ -38,17 +47,8 @@
             this.transformControl1.ForeColor = System.Drawing.Color.Chocolate;
             this.transformControl1.Location = new System.Drawing.Point(230, 12);
             this.transformControl1.Name = "transformControl1";
-            this.transformControl1.Size = new System.Drawing.Size(472, 275);
+            this.transformControl1.Size = new System.Drawing.Size(502, 275);
             this.transformControl1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(46, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

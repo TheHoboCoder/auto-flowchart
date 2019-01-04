@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.moveControl = new FlowChart.MoveControl();
             this.upperLeftControl = new FlowChart.MoveControl();
             this.bottomLeftControl = new FlowChart.MoveControl();
             this.bottomRightControl = new FlowChart.MoveControl();
@@ -37,6 +38,18 @@
             this.bottomControl = new FlowChart.MoveControl();
             this.topControl = new FlowChart.MoveControl();
             this.SuspendLayout();
+            // 
+            // moveControl
+            // 
+            this.moveControl.BackColor = System.Drawing.Color.DarkSalmon;
+            this.moveControl.CurrentMoveDirection = FlowChart.MoveControl.MoveDirection.BOTH;
+            this.moveControl.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.moveControl.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.moveControl.Location = new System.Drawing.Point(79, 53);
+            this.moveControl.Name = "moveControl";
+            this.moveControl.Size = new System.Drawing.Size(261, 77);
+            this.moveControl.TabIndex = 8;
+            this.moveControl.LocationChanged += new System.EventHandler(this.moveControl_LocationChanged);
             // 
             // upperLeftControl
             // 
@@ -67,7 +80,6 @@
             this.bottomRightControl.Name = "bottomRightControl";
             this.bottomRightControl.Size = new System.Drawing.Size(33, 26);
             this.bottomRightControl.TabIndex = 5;
-            this.bottomRightControl.Resize += new System.EventHandler(this.bottomRightControl_Resize);
             // 
             // upperRightControl
             // 
@@ -89,6 +101,8 @@
             this.rightControl.Name = "rightControl";
             this.rightControl.Size = new System.Drawing.Size(33, 210);
             this.rightControl.TabIndex = 3;
+            this.rightControl.LocationChanged += new System.EventHandler(this.rightControl_LocationChanged);
+            this.rightControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controls_MouseUp);
             // 
             // leftControl
             // 
@@ -99,6 +113,8 @@
             this.leftControl.Name = "leftControl";
             this.leftControl.Size = new System.Drawing.Size(33, 210);
             this.leftControl.TabIndex = 2;
+            this.leftControl.LocationChanged += new System.EventHandler(this.leftControl_LocationChanged);
+            this.leftControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controls_MouseUp);
             // 
             // bottomControl
             // 
@@ -109,6 +125,8 @@
             this.bottomControl.Name = "bottomControl";
             this.bottomControl.Size = new System.Drawing.Size(359, 29);
             this.bottomControl.TabIndex = 1;
+            this.bottomControl.LocationChanged += new System.EventHandler(this.bottomControl_LocationChanged);
+            this.bottomControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.controls_MouseUp);
             // 
             // topControl
             // 
@@ -126,6 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.moveControl);
             this.Controls.Add(this.upperLeftControl);
             this.Controls.Add(this.bottomLeftControl);
             this.Controls.Add(this.bottomRightControl);
@@ -137,6 +156,8 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.Name = "TransformControl";
             this.Size = new System.Drawing.Size(468, 274);
+            this.Load += new System.EventHandler(this.TransformControl_Load);
+            this.Resize += new System.EventHandler(this.TransformControl_Resize);
             this.ResumeLayout(false);
 
         }
@@ -151,5 +172,6 @@
         private MoveControl bottomRightControl;
         private MoveControl bottomLeftControl;
         private MoveControl upperLeftControl;
+        private MoveControl moveControl;
     }
 }
